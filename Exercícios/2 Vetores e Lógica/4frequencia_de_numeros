@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+    int v[10], freq[100] = {0};
+    printf("Digite 10 numeros inteiros:\n");
+    for (int i = 0; i < 10; i++) {
+        scanf("%d", &v[i]);
+        freq[v[i]]++;
+    }
+    printf("Frequencias:\n");
+    for (int i = 0; i < 10; i++) {
+        if (freq[v[i]] != -1) {
+            printf("%d aparece %d vezes\n", v[i], freq[v[i]]);
+            freq[v[i]] = -1;
+        }
+    }
+    return 0;
+}
